@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PixelPals — Workshop Showcase</title>
+  <link rel="icon" type="image/x-icon" href="staricon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#D4D994; --card:#ffffff; --muted:#5e6623; --accent:#893941; --accent-2:#cb7885; --text:#893941;
+      --radius:14px; --shadow: 0 8px 30px rgba(22, 42, 91, 0.08);
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Inter',system-ui,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); margin:0; line-height:1.45}
+    .container{max-width:1400px;margin:36px auto;padding:24px}
+    header{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+    .title{font-size:1.6rem;font-weight:700;margin:0;color:var(--text)}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:22px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;color:var(--text)}
+    .play-wrapper{display:flex;flex-direction:column;gap:10px}
+    .play-iframe{width:100%;height:500px;border-radius:10px;border:0;overflow:hidden}
+    .play-meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+    .gallery{display:flex;overflow-x:auto;gap:12px;margin-top:18px;padding-bottom:10px;scroll-snap-type:x mandatory}
+    .gallery::-webkit-scrollbar{height:8px}
+    .gallery::-webkit-scrollbar-thumb{background:var(--muted);border-radius:4px}
+    .screenshot{flex:0 0 auto;width:320px;height:200px;object-fit:cover;border-radius:10px;border:3px solid rgba(15,23,42,0.03);scroll-snap-align:center}
+    .timeline{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .stat-grid{display:flex;gap:12px;margin-top:18px}
+    .stat{flex:1;background:linear-gradient(180deg,#fff,#f8fbff);padding:14px;border-radius:12px;text-align:center;color:var(--text)}
+    .stat strong{display:block;font-size:1.25rem;color:var(--text)}
+    footer{margin-top:26px;padding:18px;text-align:center;color:var(--muted)}
+    @media (max-width:880px){.hero{grid-template-columns:1fr;} .play-iframe{height:400px}}
+    @media (max-width:480px){.play-iframe{height:300px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1 class="title">PixelPals</h1>
+        <div class="subtitle">Teaching kids coding & creativity through game development in Pakistan</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:10px;align-items:center">
+        <a class="btn" href="#contact">Get the Workshop</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h3 style="margin:0 0 8px 0">Play a Student Game</h3>
+        <div class="play-wrapper">
+        <iframe class="play-iframe" src="https://gd.games/games/9cdf416c-f78f-465e-b8ad-d8888e4f7661" title="Student Game" allow="autoplay; fullscreen"></iframe>
+          <div class="play-meta">
+            <div style="font-size:0.95rem;color:var(--muted)">Made by <strong>Noreen (16)</strong> during our July 2025 workshop</div>
+            <div style="font-size:0.85rem;color:var(--muted)">Built with GDevelop</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px 0">About the Workshop</h3>
+        <p style="color:var(--muted);margin:0 0 12px 0">PixelPals is a free 12-day game development workshop that teaches students (ages 10–16) to design and build games using GDevelop. No prior experience required.</p>
+        <div class="stat-grid">
+          <div class="stat"><span style="color:var(--muted)">Students</span><strong>10</strong></div>
+          <div class="stat"><span style="color:var(--muted)">Hours</span><strong>24</strong></div>
+          <div class="stat"><span style="color:var(--muted)">Games</span><strong>20</strong></div>
+        </div>
+        <div style="margin-top:14px">
+          <h4 style="margin:0 0 6px 0">How it worked</h4>
+          <div class="timeline">
+            <div><strong>Day 1–6:</strong> Rock-Paper-Scissors game</div>
+            <div><strong>Day 7–11:</strong> Platformer game</div>
+            <div><strong>Day 12:</strong> Showcase</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" style="margin-top:22px">
+      <div class="card">
+        <h3 style="margin:0 0 12px 0">Student Creations</h3>
+        <p style="color:var(--muted);margin:0 0 12px 0">Below is a scrollable gallery of screenshots from the platformer games that students created.</p>
+        <div class="gallery">
+          <img class="screenshot" src="screenshots/1.png" alt="Screenshot 1">
+          <img class="screenshot" src="screenshots/2.png" alt="Screenshot 2">
+          <img class="screenshot" src="screenshots/3.png" alt="Screenshot 3">
+          <img class="screenshot" src="screenshots/4.png" alt="Screenshot 4">
+          <img class="screenshot" src="screenshots/5.png" alt="Screenshot 5">
+          <img class="screenshot" src="screenshots/6.png" alt="Screenshot 6">
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" style="margin-top:22px">
+      <div class="card">
+        <h3 style="margin:0 0 10px 0">Impact & Feedback</h3>
+        <p style="color:var(--muted);margin:0 0 14px 0">We focus on hands-on learning and creative ownership — each student left with two completed games and newfound confidence in digital skills.</p>
+        <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="mailto:azkazia2007@gmail.com?subject=PixelPals%20Workshop%20Invitation">Invite PixelPals to your school</a>
+          <a class="btn" href="curriculum.pdf" style="background:transparent;border:2px solid rgba(6,95,70,0.08);color:var(--accent-2)" target="_blank">View Full Curriculum (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <div class="card">
+        <h3 style="margin:0 0 8px 0">About the Founder & Contact</h3>
+        <p style="color:var(--muted);margin:0 0 12px 0">Hi — I'm Azka Zia, a high-school student from Pakistan. I run PixelPals to make coding accessible through creative game development workshops. If you'd like to host a workshop or collaborate, email me at <strong>azkazia2007@gmail.com</strong>.</p>
+        <form action="mailto:azkazia2007@gmail.com" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:8px">
+          <input name="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+          <input name="email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+          <textarea name="message" placeholder="How can we help?" style="padding:10px;border-radius:8px;border:1px solid #e6eef8"></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      PixelPals • Built with ❤️ to teach kids tech skills in Pakistan
+    </footer>
+  </div>
+</body>
+</html>
